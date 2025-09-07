@@ -25,13 +25,13 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-        working-directory: ./backend   # 👈 points to the folder with package.json
+        working-directory: ./backendn   # 👈 points to the folder with package.json
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ./backend   # 👈 package the backend folder
+          path: ./backendn   # 👈 package the backend folder
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,3 +59,4 @@ jobs:
           app-name: 'healthcare-back-app'
           slot-name: 'Production'
           package: .
+

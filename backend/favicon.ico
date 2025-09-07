@@ -1,0 +1,4 @@
+const path = require('path');
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, 'favicon.ico'));
+});
